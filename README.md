@@ -22,7 +22,7 @@ In Claude Code:
 /plugin install context-switch@context-switch
 ```
 
-That's it. You'll need [Node.js](https://nodejs.org) 18+ (you probably already have it).
+That's it. You'll need [Node.js](https://nodejs.org) 18+.
 
 **Got the folder locally?** Point at it instead:
 
