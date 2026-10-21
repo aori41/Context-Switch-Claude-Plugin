@@ -60,14 +60,6 @@ Side answers show up as a "blocked by hook" message. That's normal: it's how the
 - Side threads start fresh, so they don't know what your main chat is about. Give them a bit of context if it matters.
 - Thread history is saved in `~/.claude/context-switch/`.
 
-## Hacking on it
-
-```
-git clone https://github.com/aori41/context-switch
-claude --plugin-dir ./context-switch
-npm test
-```
-
 ## License
 
 MIT.
