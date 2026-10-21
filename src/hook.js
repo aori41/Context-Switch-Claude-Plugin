@@ -2,6 +2,7 @@
 const { handle } = require('./threads');
 const { load, save } = require('./store');
 const { asker, isChild } = require('./claude');
+const { readRecap } = require('./recap');
 
 async function readInput() {
   let raw = '';
@@ -12,9 +13,9 @@ async function readInput() {
 async function main() {
   if (isChild()) return;
 
-  const { session_id: sessionId, prompt, cwd } = await readInput();
+  const { session_id: sessionId, prompt, cwd, transcript_path: transcript } = await readInput();
   const state = load(sessionId);
-  const reply = handle(state, prompt, asker(cwd));
+  const reply = handle(state, prompt, asker(cwd, () => readRecap(transcript)));
   if (reply === null) return;
 
   save(sessionId, state);

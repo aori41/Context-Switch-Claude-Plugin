@@ -55,9 +55,25 @@ While you're in a side thread, your messages are quietly sent to a separate Clau
 
 Side answers show up as a "blocked by hook" message. That's normal: it's how they stay out of your main chat.
 
+## Try a few directions 🔀
+
+Every side thread starts with a small recap of your main chat (the last 20 messages), so it already knows what you're working on. That makes it great for A/B-ing ideas without messing up your main conversation:
+
+```
+> /side try it with a state machine
+  ...explore option A...
+> /back
+> /side try it with plain if/else instead
+  ...explore option B...
+> /back
+> /threads          ← compare, hop back into the winner
+```
+
+Pick the one you like, then carry on in your main chat.
+
 ## Good to know
 
-- Side threads start fresh, so they don't know what your main chat is about. Give them a bit of context if it matters.
+- The recap is a snapshot from when you open the thread. Anything you say in the main chat after that isn't passed along.
 - Thread history is saved in `~/.claude/context-switch/`.
 
 ## License

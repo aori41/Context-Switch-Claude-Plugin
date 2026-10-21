@@ -11,13 +11,13 @@ const quote = text => (WINDOWS ? `"${text}"` : text);
 
 const args = (thread, project) => ['-p', thread.started ? '--resume' : '--session-id', thread.id, '--add-dir', quote(project)];
 
-function asker(project) {
+function asker(project, recap) {
   return (thread, question) => {
     fs.mkdirSync(SESSIONS, { recursive: true });
 
     const result = spawnSync('claude', args(thread, project), {
       cwd: SESSIONS,
-      input: question,
+      input: thread.started ? question : recap() + question,
       encoding: 'utf8',
       shell: WINDOWS,
       env: { ...process.env, [CHILD_FLAG]: '1' },
