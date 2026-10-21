@@ -1,0 +1,11 @@
+{
+  "name": "context-switch",
+  "owner": { "name": "aori41" },
+  "plugins": [
+    {
+      "name": "context-switch",
+      "source": "./",
+      "description": "Step out to a side topic and come back to an untouched main conversation."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "context-switch",
+  "version": "0.1.0",
+  "description": "Claude Code plugin: side threads that never touch the main conversation.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "context-switch",
+  "version": "0.1.0",
+  "description": "Step out to a side topic and come back to an untouched main conversation: /side, /back, /threads.",
+  "license": "MIT",
+  "keywords": ["context", "threads", "side-topic", "productivity"]
+}
